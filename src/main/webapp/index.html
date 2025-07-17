@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Itinerary</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styling */
+    body {
+      background-color: #7adfc6;
+      padding: 20px;
+    }
+    .container {
+      background-color: #ffff;
+      border-radius: 5px;
+      padding: 20px;
+    }
+    form {
+      margin-bottom: 30px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: Algerian, sans-serif; /* Set Algerian as the font for all headings */
+      margin-bottom: 20px;
+    }
+    .hotel-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .hotel-image {
+      width: 150px;
+      margin-right: 20px;
+      border-radius: 5px;
+    }
+    .hotel-details {
+      flex: 1;
+    }
+    .hotel-name {
+        font-family: Algerian, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .hotel-location {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    .hotel-rating {
+      font-size: 16px;
+      color: #ff9800; /* orange color for rating */
+      margin-bottom: 10px;
+    }
+    .about-us {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .about-description {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+    <div class="header">
+  <div class="container">
+     <center>
+    <h2>Travel Itinerary </h2>
+    </center>
+</div>
+<div class="about-us">
+  <center>
+  <h2>About Us</h2></center>
+  <p class="about-description">Welcome to our Travel Itinerary Management System! We are passionate about helping you plan your trips seamlessly and enjoy memorable travel experiences.</p>
+  </div>
+</div>
+ <!--<div class="section">
+     <h2>About Us</h2> 
+    <p>Welcome to our travel itinerary website. We provide personalized travel plans to make your trip unforgettable.</p>
+</div>-->
+    <form action="final" method="get">
+      <!-- User Information -->
+      <div class="form-group">
+        <label for="username">User Name:</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter your username" name="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password" name="pass">
+      </div>
+      <div class="form-group">
+        <label for="aadhar">Aadhar Number:</label>
+        <input type="text" class="form-control" id="aadhar" placeholder="Enter your Aadhar number"name="aadhar">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input name="email"   type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input name="phone"    type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea name="address"    class="form-control" id="address" rows="3"></textarea>
+      </div>
+      <hr><hr>
+
+
+
+      <!-- Trip Information -->
+      <h2>Embark on Your Journey: Start Planning Your Perfect Trip!</h2>
+      <div class="form-group">
+        <label for="trip">Trip Name:</label>
+        <select name="tripName"   class="form-control" id="trip">
+          <option value="chennai">Chennai</option>
+          <option value="vijayawada">Vijayawada</option>
+          <option value="Banglore">Banglore</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="tripStartDate">Trip Start Date:</label>
+        <input name="tripSTA"    type="date" class="form-control" id="tripStartDate">
+      </div>
+      <div class="form-group">
+        <label for="tripEndDate">Trip End Date:</label>
+        <input name="tripEnD"      type="date" class="form-control" id="tripEndDate">
+      </div>
+      <!--<div class="form-group">
+        <label for="tripStatus">Trip Status:</label>
+        <input name="tripSTAT"        type="text" class="form-control" id="tripStatus" placeholder="Enter trip status">
+      </div>-->
+      <div class="form-group">
+        <label for="travelType">Choose a travel type:</label>
+        <select name="travelType"     class="form-control" id="travelType">
+          <option value="Car">Car</option>
+          <option value="Bus">Bus</option>
+          <option value="Airplane">Airplane</option>
+          <option value="Train">Train</option>
+        </select>
+      </div>
+      <hr><hr>
+
+      <!-- Hotel Information -->
+      <h2>Discover Your Ideal Stay: Explore Our Selection of Hotels</h2>
+      <div class="form-group">
+        <label for="hotelCheckIn">Hotel Check-In Date:</label>
+        <input name="hotChIn"     type="date" class="form-control" id="hotelCheckIn">
+      </div>
+      <div class="form-group">
+        <label for="hotelCheckOut">Hotel Check-Out Date:</label>
+        <input name="hotChOu" type="date" class="form-control" id="hotelCheckOut">
+      </div>
+      <div class="form-group">
+        <label for="hotelType">Hotel Type:</label>
+        <select name="hotelType" class="form-control" id="hotelType">
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="2bhk_3bhk">suit</option>
+        </select>
+      </div>
+<br>
+<br>
+      <div class="hotel-container">
+        <img src="./alpha.jpg" alt="Hotel Image" class="hotel-image">
+        <div class="hotel-details">
+          <div class="hotel-name">HOTEL ALPHA</div>
+          <div class="hotel-location">Location: CHENNAI, INDIA</div>
+          <div class="hotel-rating">
+          <p>Rating: &#9733;&#9733;&#9733;&#9733;&#9734; (4 out of 5 stars)</p></div>
+          <div class="hotel-description">
+            <p>Experience luxury and comfort at our hotel in Chennai, strategically located in the heart of the city. With modern amenities, impeccable service, and a vibrant atmosphere, we offer a memorable stay for business and leisure travelers alike.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-container">
+        <img src="hotel beta.jpg" alt="Hotel Image" class="hotel-image">
+        <div class="hotel-details">
+          <div class="hotel-name">HOTEL BETA</div>
+          <div class="hotel-location">Location: VIJAYAWADA, INDIA</div>
+          <div class="hotel-rating">
+          <p>Rating: &#9733;&#9733;&#9733;&#9733;&#9734; (4.3 out of 5 stars)</p></div>
+          <div class="hotel-description">
+            <p>Discover Hotel Beta in the vibrant city of Vijayawada, offering modern amenities and personalized services. Located in a prime area, our hotel provides a comfortable and convenient stay for travelers, whether for business or leisure. Experience warm hospitality, exquisite dining options, and a relaxing ambiance during your visit to Vijayawada.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-container">
+        <img src="hotel gamma.jpg" alt="Hotel Image" class="hotel-image">
+        <div class="hotel-details">
+          <div class="hotel-name">HOTEL GAMMA</div>
+          <div class="hotel-location">Location: BANGALORE, INDIA</div>
+          <div class="hotel-rating">
+          <p>Rating: &#9733;&#9733;&#9733;&#9733;&#9734; (4.2 out of 5 stars)</p></div>
+          <div class="hotel-description">
+            <p>Explore Hotel Gamma in the vibrant city of Bangalore, where modern comfort meets convenience. Strategically located for easy access to attractions and business centers, our hotel offers exceptional hospitality, luxurious amenities, and a memorable stay experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-container">
+        <img src="hotel delta.jpg" alt="Hotel Image" class="hotel-image">
+        <div class="hotel-details">
+          <div class="hotel-name">HOTEL DELTA</div>
+          <div class="hotel-location">Location: MUMBAI, INDIA</div>
+          <div class="hotel-rating">
+          <p>Rating: &#9733;&#9733;&#9733;&#9733; (4 out of 5 stars)</p></div>
+          <div class="hotel-description">
+            <p>Hotel Delta in Mumbai presents a fusion of contemporary elegance and warm hospitality. Located conveniently amidst the city's vibrant culture, our hotel offers a comfortable retreat for both business and leisure travelers. Experience top-notch amenities, personalized service, and a memorable stay that captures the essence of Mumbai's dynamic spirit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-container">
+        <img src="hotel epsilon.jpg" alt="Hotel Image" class="hotel-image">
+        <div class="hotel-details">
+          <div class="hotel-name">HOTEL EPSILON</div>
+          <div class="hotel-location">Location: DELHI, INDIA</div>
+          <div class="hotel-rating">
+          <p>Rating: &#9733;&#9733;&#9733;&#9733;&#9734; (4.2 out of 5 stars)</p></div>
+          <div class="hotel-description">
+            <p>Hotel Epsilon in Delhi offers a harmonious blend of luxury and comfort in the heart of the city. With a prime location, our hotel provides easy access to key attractions and business districts. Experience unparalleled hospitality, modern amenities, and a delightful stay experience during your visit to Delhi.</p>
+          </div>
+        </div>
+      </div>
+       <center>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </center>
+    </form>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+       <center>
+  <footer>
+    <p><b>Contact Us</b>: TravelItenary@email.com | <b>Follow Us</b>: <a href="#">Facebook</a>, <a href="#">Twitter</a></p>
+    <p>&copy; 2024 Travel Itinerary</p> </center>
+  </footer>
+</div>
+  <!-- Bootstrap JS and jQuery (Optional) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
